@@ -11,9 +11,11 @@
 -export([start/2,
 		 stop/1]).
 
-@@ ejabberd_listener
+%% ejabberd_listener
 -export([socket_type/0,
          start_listener/2]).
+
+-export ([stop/0]).
 
 -include("ejabberd.hrl").
 
@@ -29,7 +31,7 @@ socket_type() ->
 	
 % -spec start_listener(list())
 start_listener({Port, _IP, webserver}, Opts) ->
-     Dispatch = get_dispatch(Opts).
+     Dispatch = get_dispatch(Opts),
 	 NumAcceptors = gen_mod:get_opt(num_acceptors, Opts, 100),
 	 start_webserver(NumAcceptors, Port, Dispatch).
 	 
@@ -44,7 +46,7 @@ start(_Host,Opts)->
 	
 	
 start_webserver(_,undefined,_)->
-    {ok, not_started}:
+    {ok, not_started};
 start_webserver(NumAcceptors, Port, Dispatch)->
     case cowboy:start_http(?LISTENER, NumAcceptors,
 							[{port,Port}],
