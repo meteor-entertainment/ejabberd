@@ -328,7 +328,7 @@
 
                     <div id="err"></div>
 
-                    <div id="login_pane" class="main-content auth">
+                    <div id="login_pane" class="main-content auth cloak">
                         <div class="row-fluid page-block">
                             <h1><a href="#" onclick="location.reload();">OiD Chat</a></h1>
                             <p class="subhead">Where <i class="icon-beer"></i>, <i class="icon-code"></i> and top secret Skunkwerks unite in holy matrimony.</p>
@@ -398,51 +398,95 @@
             <div class="wrapper">
                 <div id="sendmsg_pane" class="main-content chat">
                         <div class="row-fluid"> 
-                            <a class="btn btn-danger fr margin10v" type="button" tabindex="4" onclick="return quit();">Quit</a>  
+                            <a class="btn btn-danger fr margin10v" type="button" tabindex="4" onclick="return quit();"><i class="icon-signout"></i> Leave</a>  
                             <h3>"oidchat"</h3>
                             <p id="curr_subj">The subject of the room goes here. For oidchat, the subject happens to be astronomical asskicking koala ninjas.</p>
                             
                             <div id="iResp">
                             <!--//SAMPLE CONVERSATION-->
-                                <p>
-                                    <strong>Brian Enriquez:</strong> Cupcake ipsum dolor sit amet cheesecake bonbon candy oat cake. I love tootsie roll bear claw cookie chocolate cake. Applicake I love wafer toffee toffee ice cream. Fruitcake candy tiramisu chocolate bar.
-                                </p>   
-                                <p>
-                                    <strong>Brian Enriquez:</strong> Well, you don't say!
-                                </p>   
-                                <p>
-                                    <strong>Lily Grace Enriquez:</strong> Bah bah bah bah
-                                </p>  
-                                <p>
-                                    <strong>Sarah Novotny:</strong> Cupcake ipsum dolor sit amet cheesecake bonbon candy oat cake. I love tootsie roll bear claw cookie chocolate cake.
-                                </p>
-                                <p>
-                                    <strong>Cyrus Durgin:</strong> Cupcake ipsum dolor sit amet cheesecake bonbon candy oat cake. I love tootsie roll bear claw cookie chocolate cake. Applicake I love wafer toffee toffee ice cream. Fruitcake candy tiramisu chocolate bar. Cupcake ipsum dolor sit amet cheesecake bonbon candy oat cake. I love tootsie roll bear claw cookie chocolate cake. Applicake I love wafer toffee toffee ice cream. Fruitcake candy tiramisu chocolate bar.
-                                </p> 
-                                <p>
-                                    <strong>Brian Enriquez:</strong> Cupcake ipsum dolor sit amet cheesecake bonbon candy oat cake. I love tootsie roll bear claw cookie chocolate cake. Applicake I love wafer toffee toffee ice cream. Fruitcake candy tiramisu chocolate bar.
-                                </p>   
-                                <p>
-                                    <strong>Brian Enriquez:</strong> Well, you don't say!
-                                </p>   
-                                <p>
-                                    <strong>Lily Grace Enriquez:</strong> Bah bah bah bah
-                                </p>  
-                                <p>
-                                    <strong>Sarah Novotny:</strong> Cupcake ipsum dolor sit amet cheesecake bonbon candy oat cake. I love tootsie roll bear claw cookie chocolate cake.
-                                </p>
-                                <p>
-                                    <strong>Brian Enriquez:</strong> Cupcake ipsum dolor sit amet cheesecake bonbon candy oat cake. I love tootsie roll bear claw cookie chocolate cake. Applicake I love wafer toffee toffee ice cream. Fruitcake candy tiramisu chocolate bar.
-                                </p>   
-                                <p>
-                                    <strong>Brian Enriquez:</strong> Well, you don't say!
-                                </p>   
-                                <p>
-                                    <strong>Lily Grace Enriquez:</strong> Bah bah bah bah
-                                </p>  
-                                <p>
-                                    <strong>Sarah Novotny:</strong> Cupcake ipsum dolor sit amet cheesecake bonbon candy oat cake. I love tootsie roll bear claw cookie chocolate cake.
-                                </p>   
+                                <ul class="no-bullets message-block">
+                                    <li class="message-badge-list"><i class="icon-bell-alt"></i><i class="icon-star"></i><i class="icon-bookmark"></i></li>
+                                    <li class="messenger">Brian Enriquez:</li>
+                                    <li class="message">Cupcake ipsum dolor sit amet cheesecake bonbon candy oat cake. I love tootsie roll bear claw cookie chocolate cake. Applicake I love wafer toffee toffee ice cream. Fruitcake candy tiramisu chocolate bar.</li>
+                                    <li class="message-time">7:27pm</li>
+                                </ul>
+
+                                <ul class="no-bullets message-block">
+                                    <li class="message-badge-list"><i class="icon-bell-alt"></i><i class="icon-star"></i><i class="icon-bookmark"></i></li>
+                                    <li class="messenger">Lily Grace Enriquez:</li>
+                                    <li class="message">Bah bah bah bah</li>
+                                    <li class="message-time">7:27pm</li>
+                                </ul>
+
+                                <ul class="no-bullets message-block">
+                                    <li class="message-badge-list"><i class="icon-bell-alt"></i><i class="icon-star"></i><i class="icon-bookmark"></i></li>
+                                    <li class="messenger">Brett Holton:</li>
+                                    <li class="message">I agree completely! And also have a long beard and an eye patch. Argh!</li>
+                                    <li class="message-time">7:27pm</li>
+                                </ul>
+
+                                <ul class="no-bullets message-block">
+                                    <li class="message-badge-list"><i class="icon-bell-alt"></i><i class="icon-star"></i><i class="icon-bookmark"></i></li>
+                                    <li class="messenger">Michael Jordan:</li>
+                                    <li class="message">I dunk Oreos for I dunk basketballs. I dunk, he dunks, she dunks.</li>
+                                    <li class="message-time">7:27pm</li>
+                                </ul>
+  
+                                <ul class="no-bullets message-block">
+                                    <li class="message-badge-list"><i class="icon-bell-alt"></i><i class="icon-star"></i><i class="icon-bookmark"></i></li>
+                                    <li class="messenger">Brian Enriquez:</li>
+                                    <li class="message">Cupcake ipsum dolor sit amet cheesecake bonbon candy oat cake. I love tootsie roll bear claw cookie chocolate cake. Applicake I love wafer toffee toffee ice cream. Fruitcake candy tiramisu chocolate bar.</li>
+                                    <li class="message-time">7:27pm</li>
+                                </ul>
+
+                                <ul class="no-bullets message-block">
+                                    <li class="message-badge-list"><i class="icon-bell-alt"></i><i class="icon-star"></i><i class="icon-bookmark"></i></li>
+                                    <li class="messenger">Lily Grace Enriquez:</li>
+                                    <li class="message">Bah bah bah bah</li>
+                                    <li class="message-time">7:27pm</li>
+                                </ul>
+
+                                <ul class="no-bullets message-block">
+                                    <li class="message-badge-list"><i class="icon-bell-alt"></i><i class="icon-star"></i><i class="icon-bookmark"></i></li>
+                                    <li class="messenger">Brett Holton:</li>
+                                    <li class="message">I agree completely! And also have a long beard and an eye patch. Argh!</li>
+                                    <li class="message-time">7:27pm</li>
+                                </ul>
+
+                                <ul class="no-bullets message-block">
+                                    <li class="message-badge-list"><i class="icon-bell-alt"></i><i class="icon-star"></i><i class="icon-bookmark"></i></li>
+                                    <li class="messenger">Michael Jordan:</li>
+                                    <li class="message">I dunk Oreos for I dunk basketballs. I dunk, he dunks, she dunks.</li>
+                                    <li class="message-time">7:27pm</li>
+                                </ul>
+
+                                <ul class="no-bullets message-block">
+                                    <li class="message-badge-list"><i class="icon-bell-alt"></i><i class="icon-star"></i><i class="icon-bookmark"></i></li>
+                                    <li class="messenger">Brian Enriquez:</li>
+                                    <li class="message">Cupcake ipsum dolor sit amet cheesecake bonbon candy oat cake. I love tootsie roll bear claw cookie chocolate cake. Applicake I love wafer toffee toffee ice cream. Fruitcake candy tiramisu chocolate bar.</li>
+                                    <li class="message-time">7:27pm</li>
+                                </ul>
+
+                                <ul class="no-bullets message-block">
+                                    <li class="message-badge-list"><i class="icon-bell-alt"></i><i class="icon-star"></i><i class="icon-bookmark"></i></li>
+                                    <li class="messenger">Lily Grace Enriquez:</li>
+                                    <li class="message">Bah bah bah bah</li>
+                                    <li class="message-time">7:27pm</li>
+                                </ul>
+
+                                <ul class="no-bullets message-block">
+                                    <li class="message-badge-list"><i class="icon-bell-alt"></i><i class="icon-star"></i><i class="icon-bookmark"></i></li>
+                                    <li class="messenger">Brett Holton:</li>
+                                    <li class="message">I agree completely! And also have a long beard and an eye patch. Argh!</li>
+                                    <li class="message-time">7:27pm</li>
+                                </ul>
+
+                                <ul class="no-bullets message-block">
+                                    <li class="message-badge-list"><i class="icon-bell-alt"></i><i class="icon-star"></i><i class="icon-bookmark"></i></li>
+                                    <li class="messenger">Michael Jordan:</li>
+                                    <li class="message">I dunk Oreos for I dunk basketballs. I dunk, he dunks, she dunks.</li>
+                                    <li class="message-time">7:27pm</li>
+                                </ul>
                             </div>
 
                             <div class="chat-space-container">  
