@@ -30,8 +30,9 @@ socket_type() ->
 	independent.
 	
 % -spec start_listener(list())
-start_listener({Port, _IP, webserver}, Opts) ->
-     Dispatch = get_dispatch(Opts),
+start_listener({Port, _IP, tcp}, Opts) ->
+         Dispatch = get_dispatch(Opts),
+         ?INFO_MSG("DISPATCH ~p~n",[Dispatch]),
 	 NumAcceptors = gen_mod:get_opt(num_acceptors, Opts, 100),
 	 start_webserver(NumAcceptors, Port, Dispatch).
 	 
@@ -74,6 +75,7 @@ get_dispatch(Opts)->
 	Host = gen_mod:get_opt(host, Opts, '_'),
 	Prefix = gen_mod:get_opt(prefix, Opts, "/[...]"),
 	Appname = gen_mod:get_opt(appname, Opts, ejabberd),
+        ?INFO_MSG("get dispatch Host:~p Prefix:~p Appname~p",[Host, Prefix,Appname]),
 	cowboy_router:compile([{Host, [{Prefix, cowboy_static, [
 										{directory, {priv_dir, Appname, []}},
 										{mimetypes, {fun mimetypes:path_to_mimes/2, default}}
