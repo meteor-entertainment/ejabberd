@@ -22,13 +22,15 @@ body {
 
 .main-content {
 	margin-top: 60px;
+  margin-bottom: 40px;
 }
 .main-content.auth {
   width: 800px;
   margin: 60px auto 0;
 }
 .main-content.chat {
-  margin-top: 20px;
+  margin: 10px 20px 0;
+  position: relative;
 }
 form.login {
   background-color: rgba(0,0,0,0.2);
