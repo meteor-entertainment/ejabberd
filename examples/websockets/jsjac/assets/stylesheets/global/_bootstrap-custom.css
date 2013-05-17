@@ -3,3 +3,12 @@ body {
   font-size: 13px;
   color: #aeaeae;
 }
+.close {
+	text-shadow: none;
+	color: #aeaeae;
+	opacity: 1;
+}
+.close:hover {
+	opacity: 1;
+	color: #fff;
+}

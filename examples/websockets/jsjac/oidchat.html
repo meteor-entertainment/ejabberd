@@ -7,6 +7,9 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/styles.css">
 
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/javascripts/application.js"></script>
     <script type="text/javascript" src="jsjac.js"></script>
         <!-- comment in above and uncomment below if you want to modify/hack
         on jsjac -->
@@ -328,7 +331,7 @@
 
                     <div id="err"></div>
 
-                    <div id="login_pane" class="main-content auth">
+                    <div id="login_pane" class="main-content auth cloak">
                         <div class="row-fluid page-block">
                             <h1><a href="#" onclick="location.reload();">OiD Chat</a></h1>
                             <p class="subhead">Where <i class="icon-beer"></i>, <i class="icon-code"></i> and top secret Skunkwerks unite in holy matrimony.</p>
@@ -397,17 +400,24 @@
 
             <div class="wrapper">
                 <div id="sendmsg_pane" class="main-content chat">
-                        <div class="row-fluid"> 
-                            <a class="btn btn-danger fr margin10v" type="button" tabindex="4" onclick="return quit();"><i class="icon-signout"></i> Leave</a>  
-                            <h3>"oidchat"</h3>
-                            <p id="curr_subj">The subject of the room goes here. For oidchat, the subject happens to be astronomical asskicking koala ninjas.</p>
+                        <div class="row-fluid">
+                            <div class="header">
+                                <a class="btn btn-danger fr margin10v" type="button" tabindex="4" onclick="return quit();"><i class="icon-signout"></i> Leave</a>  
+                                <h3>"oidchat"</h3>
+                                <p id="curr_subj">The subject of the room goes here. For oidchat, the subject happens to be astronomical asskicking koala ninjas. <a id="change_subject" href="#">Change Subject</a></p>
+                            </div>
                             
                             <div id="iResp">
                             <!--//SAMPLE CONVERSATION-->
-                                <ul class="no-bullets message-block me cloak">
-                                    <li class="message-badge-list"><i class="icon-bell-alt"></i><i class="icon-star"></i><i class="icon-bookmark"></i></li>
+                                <ul class="no-bullets message-block me">
                                     <li class="messenger">Brian Enriquez:</li>
                                     <li class="message">Cupcake ipsum dolor sit amet cheesecake bonbon candy oat cake. I love tootsie roll bear claw cookie chocolate cake. <span class="at-mention">@Brett Holton</span> Applicake I love wafer toffee toffee ice cream. Fruitcake candy tiramisu chocolate bar.</li>
+                                    <li class="message-time">7:27pm</li>
+                                </ul>
+
+                                <ul class="no-bullets message-block">
+                                    <li class="messenger">Brett Holton:</li>
+                                    <li class="message">YO <span class="at-mention me">@Brian Enriquez</span> This is a message specifically addressed to you.</li>
                                     <li class="message-time">7:27pm</li>
                                 </ul>
                             </div>
@@ -424,25 +434,26 @@
                                 </ul>   
                             </div>     
 
-                            <div class="row-fluid cloak">
-                                <form name="subjForm" onsubmit="return sendSubj(this);" action="#">
-                                    <label>Set Subject</label>
-                                    <input type="text" size="80" id="subjBox" name="subj" />
-                                    <a type="submit" class="btn btn-blue fr">Submit</a>
-                                </form>
-                            </div>
-
                             <form id="form_message" name="sendForm" onsubmit="return sendMsg(this);" action="#">
                                 <label>Write a Message:</label>
                                 <textarea name="msg" id='msgArea' rows="3" tabindex="2"></textarea>             
-                                <button class="btn btn-blue" type="submit" tabindex="3">Submit</button>
-
-                                <div class="brand-bug">
-                                    <span class="logo-oidchat">OiD Chat</span> &nbsp;&copy; 2013 Meteor Entertainment
-                                </div>    
+                                <button class="btn btn-blue" type="submit" tabindex="3">Submit</button>   
                             </form>
-                        </div>
+                        </div> 
                     </div><!--/.main-content.chat-->
+
+                    <form id="form_setSubject" class="" name="subjForm" onsubmit="return sendSubj(this);" action="#">
+                        <div class="control-group">
+                            <button type="button" class="close"><i class="icon-remove"></i></button>
+                            <label>Set Subject</label>
+                            <input type="text" size="80" id="subjBox" name="subj" />
+                            <a type="submit" class="btn btn-blue fr">Submit</a>
+                        </div>
+                    </form>
+
+                    <div class="brand-bug">
+                        <span class="logo-oidchat">OiD Chat</span> &nbsp;&copy; 2013 Meteor Entertainment
+                    </div>
             </div><!--/.wrapper-->    
         </body>
         </html>

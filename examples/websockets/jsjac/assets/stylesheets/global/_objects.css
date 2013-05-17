@@ -1,13 +1,13 @@
 #iResp {
-    height: 360px;
+    height: 400px;
     overflow-y: auto;
     background-color: #171717;
-    padding: 15px 20px 20px 13px; 
+    padding: 10px 20px 10px 13px; 
     margin-bottom: 20px;
     margin-right: 220px;
     border-radius: 2px;
 }
-#sendmsg_pane {display: none;} 
+#sendmsg_pane {display: ;} 
 #msgArea {
 	resize: none; 
 }
@@ -22,8 +22,8 @@
 .chat-space-container {
 	position: absolute;
 	width: 220px;
-	height: 395px;
-	top: 68px;
+	height: 400px;
+	top: 78px;
 	right: 0;
 	box-sizing: border-box;
 	padding: 10px 15px 5px;
@@ -42,7 +42,7 @@
 	clear: both;
 }
 .chat-spaces a {
-	color: #494c4c;
+	color: #888;
 	font-weight: normal;
 }
 .chat-spaces a:hover {
@@ -64,7 +64,7 @@
 	display: table-cell;
 }
 .message-block .messenger {
-	padding-left: 9px;
+	color: #fff;
 	width: 170px;
 }
 .message-block.me .messenger {
@@ -87,21 +87,26 @@
 	width: 60px;
 	font-size: 9px;
 	text-align: right;
-	color: #494c4c;
+	color: #888;
 }
 .at-mention {
-	margin-right: 2px;
-	padding: 3px 7px;
+	margin: 0 2px;
+	padding: 3px 7px 4px;
 	border-radius: 2px;
-	color: #aeaeae;
+	color: #fff;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
-	background-color: #494c4c;
+	background-color: #888;
+	font-size: 11px;
+	position: relative;
+	top: -1px;
 }
 .at-mention.me {
 	background-color: #08C;
 	color: #fff;
 }
 .brand-bug {
-	float: right;
+	position: absolute;
 	font-size: 11px;
+	bottom: 20px;
+	right: 20px;
 }

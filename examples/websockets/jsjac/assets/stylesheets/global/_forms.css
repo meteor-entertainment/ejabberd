@@ -5,8 +5,7 @@ form input {
 }
 
 label {
-	font-size: 13px;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	color: #fff;
 }
 .control-group {
@@ -25,7 +24,6 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"],
 input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], 
 input[type="week"], input[type="number"], input[type="email"], input[type="url"], 
 input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-	height: 40px;
 	width: 100%;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
@@ -35,8 +33,9 @@ input[type="search"], input[type="tel"], input[type="color"], .uneditable-input 
 	box-sizing: border-box;
 	background-image: none;
 	text-shadow: none;
-	padding: 0 10px;
+	padding: 10px;
 	margin-bottom: 10px;
+	min-height: 40px;
 	background-color: rgba(0,0,0,0.3);
 	border: 1px solid rgba(0,0,0,0.8);
 	border: 0;
@@ -65,3 +64,25 @@ input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, 
 	font-size: 11px;
 	margin-top: -10px;
 }
+#form_setSubject {
+	position: absolute;
+	top: -105px;
+	width: 100%;
+	background-color: #494c4c;
+	padding: 10px 20px 0;
+	height: 100px;
+	-webkit-transition: top 200ms ease-in-out;
+	-moz-transition: top 200ms ease-in-out;
+	transition: top 200ms ease-in-out;
+}
+#form_setSubject.open {
+	top: 0;
+}
+#form_setSubject a.btn {
+	position: relative;
+	top: -45px;
+	right: 5px;
+}
+
+
+

@@ -32,6 +32,9 @@ body {
   margin: 10px 20px 0;
   position: relative;
 }
+.header {
+  margin-bottom: 20px;
+}
 form.login {
   background-color: rgba(0,0,0,0.2);
   padding: 20px;
