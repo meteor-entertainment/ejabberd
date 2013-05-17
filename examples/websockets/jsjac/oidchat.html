@@ -341,52 +341,33 @@
                         <form class="login row-fluid" name="loginForm" onSubmit="return doLogin(this);" action="#">
 
                             <div class="row-fluid form-block">
-                                <div class="span6">
-                                    <div class="control-group">
-                                        <label for="http_base">HTTP Base</label>
-                                        <input type="text" name="http_base" id="http_base" tabindex="3" value="ws://localhost:5288/ws-xmpp/"/>
-                                    </div>
+                                <div class="control-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" name="username" id="username" tabindex="5"/>
+                                </div>    
 
-                                    <div class="control-group">
-                                        <label for="server">Domain</label>
-                                        <input type="text" name="server" id="server" tabindex="4" value="localhost"/>
-                                    </div>  
-
-                                    <div class="control-group">
-                                        <label for="muc_server">MUC Server</label>
-                                        <input type="text" name="muc_server" id="muc_server" tabindex="4" value="muc.localhost"/>
-                                    </div>  
+                                <div class="control-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" id="password" tabindex="6" />
                                 </div>
 
-                                <div class="span6">
-                                    <div class="control-group">
-                                        <label for="username">Username</label>
-                                        <input type="text" name="username" id="username" tabindex="5"/>
-                                    </div>    
+                                <div class="row-fluid">
+                                    <div class="control-group span6">
+                                        <label for="room">Room</label>
+                                        <input type="text" name="room" id="room" tabindex="7" />
+                                    </div> 
+                                    <div class="control-group span6">
+                                        <label for="nick">Nickname</label>
+                                        <input type="text" name="nick" id="nick" tabindex="8" />
+                                    </div>   
+                                </div>
 
-                                    <div class="control-group">
-                                        <label for="password">Password</label>
-                                        <input type="password" name="password" id="password" tabindex="6" />
-                                    </div>
+                                <div class="action-footer">
+                                    <button class="btn btn-blue fr" type="submit" value="Login" tabindex="9"><i class="icon-lock"></i> Login</button>
 
-                                    <div class="row-fluid">
-                                        <div class="control-group span6">
-                                            <label for="room">Room</label>
-                                            <input type="text" name="room" id="room" tabindex="7" />
-                                        </div> 
-                                        <div class="control-group span6">
-                                            <label for="nick">Nickname</label>
-                                            <input type="text" name="nick" id="nick" tabindex="8" />
-                                        </div>   
-                                    </div>
-
-                                    <div class="action-footer">
-                                        <button class="btn btn-blue fr" type="submit" value="Login" tabindex="9"><i class="icon-lock"></i> Login</button>
-
-                                        <input class="inline" type="checkbox" name="register" id="register_checkbox" />
-                                        <label for="register_checkbox">Register New Account</label>
-                                    </div>
-                                </div> 
+                                    <input class="inline" type="checkbox" name="register" id="register_checkbox" />
+                                    <label for="register_checkbox">Register New Account</label>
+                                </div>
                             </div>    
                         </form>
 
