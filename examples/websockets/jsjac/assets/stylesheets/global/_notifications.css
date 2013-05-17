@@ -1,0 +1,30 @@
+.alert {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 240px;
+  margin: 0;
+  font-size: 11px;
+  line-height: 14px;
+  padding: 15px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  color: #fff;
+  background-color: $pink;
+  border: 0;
+  text-shadow: none;
+  @include transitionFast;
+  p {
+    margin: 0;
+    &.alert-title {
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.alert.affix-bottom {
+  bottom: 80px;
+}

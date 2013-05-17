@@ -1,0 +1,119 @@
+.navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+  width: 1300px;
+  @include breakpoint(mama-bear) {
+    width: 960px;
+  }
+}
+.navbar-inverse .navbar-inner {
+	background-image: none;
+	background-color: rgba(0,0,0,0.8);
+	border: 0;
+}
+body.sdk .navbar-inverse .navbar-inner,
+body.home .navbar-inverse .navbar-inner {
+  background-color: rgba(0,0,0,0.4);
+}
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus {
+  background-color: rgba(0,0,0,0.3);
+  box-shadow: none;
+}
+.navbar-inner {
+	max-height: 40px;
+}
+.navbar a.brand,
+.navbar-inverse a.brand {
+	font-size: 13px;
+	line-height: 19px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: white;
+	letter-spacing: 1px;
+}
+.navbar-inverse a.active.brand {
+	opacity: 1;
+}
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+	color: rgba(255,255,255,0.5);
+	text-shadow: none;
+}
+a.brand img {
+	width: 126px;
+	position: relative;
+	top: -2px;
+}
+.open {position: relative;}
+.navbar a {font-weight: normal;}
+.navbar li.active a {font-weight: bold;}
+.nav .dropdown-toggle .caret {
+	border-top-color: #888;
+	border-bottom-color: #888;
+}
+.nav .dropdown-toggle:hover .caret {
+	border-top-color: #fff;
+	border-bottom-color: #fff;
+}
+.navbar .dropdown-menu {
+	background-color: #272727;
+	background-color: rgba(0,0,0,0.9);
+}
+.navbar li.active .dropdown-menu li a {
+	font-weight: normal;
+	color: #888;
+	padding: 0 10px;
+}
+.navbar li.active .dropdown-menu li.active a,
+.navbar .dropdown-menu li a,
+.navbar li.active .dropdown-menu li a:hover {
+	color: #fff;
+	background-image: none;
+	background-color: transparent;
+}
+.navbar .nav > li > .dropdown-menu:before {
+	border-bottom: 7px solid #000;
+	border-bottom: 7px solid rgba(0,0,0,0.9);
+}
+.navbar .nav > li > .dropdown-menu:after {
+	border-bottom: 6px solid #000;
+}
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle, 
+.navbar-inverse .nav li.dropdown.active > .dropdown-toggle, 
+.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
+	background-color: transparent;
+}
+
+/* PAGE NAVS
+------------------------------------------------------------------------------ */
+
+.menu {
+	margin: 0 0 20px 0;
+}
+.menu li {
+  list-style-type: none;
+}
+.menu li.active a h3 {
+	color: #fff;
+	font-weight: normal;
+}
+.menu li.active a {
+	color: #fff;
+	font-weight: bold;
+}
+.menu li a,
+.menu li a h3 {
+	display: block;
+	color: #888;
+	font-weight: normal;
+}
+.menu h3 {
+	margin: 10px 0;
+	line-height: 24px;
+}
+.menu li a:hover,
+.menu li a h3:hover,
+.nav > li > a:hover {
+	color: #fff;
+	background-color: transparent;
+}
+.menu li ul {
+	margin-left: 20px;
+}
