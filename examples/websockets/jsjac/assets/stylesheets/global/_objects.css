@@ -2,9 +2,9 @@
     height: 360px;
     overflow-y: auto;
     background-color: #171717;
-    padding: 15px 260px 20px 13px; 
+    padding: 15px 20px 20px 13px; 
     margin-bottom: 20px;
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+    margin-right: 220px;
     border-radius: 2px;
 }
 #sendmsg_pane {display: ;} 
@@ -21,14 +21,19 @@
 
 .chat-space-container {
 	position: absolute;
-	width: 200px;
-	top: 80px;
-	right: 25px;
+	width: 220px;
+	height: 395px;
+	top: 68px;
+	right: 0;
+	box-sizing: border-box;
+	padding: 10px 15px 5px;
+	background-color: #0f0f0f;
+	border-radius: 0 2px 2px 0;
 }
 .chat-spaces i.icon-circle {
 	float: right;
 	line-height: 24px;
-	color: #000;
+	color: #171717;
 }
 .chat-spaces i.icon-circle.green {
 	color: #4ead00;
@@ -82,4 +87,9 @@
 	font-size: 9px;
 	text-align: right;
 	color: #494c4c;
+}
+
+.brand-bug {
+	float: right;
+	font-size: 11px;
 }
