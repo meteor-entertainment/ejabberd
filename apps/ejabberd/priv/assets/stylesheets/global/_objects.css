@@ -1,0 +1,116 @@
+#iResp {
+    height: 400px;
+    overflow-y: auto;
+    background-color: #171717;
+    padding: 10px 20px 10px 13px; 
+    margin-bottom: 20px;
+    margin-right: 220px;
+    border-radius: 2px;
+}
+#sendmsg_pane {display: none;} 
+#msgArea {
+	resize: none; 
+}
+.msg {
+    border-bottom: 1px solid black;
+}
+.error {
+    font-weight: bold;
+    color: red;
+}
+#err {
+	padding: 10px 15px;
+	color: #fff;
+}
+
+.chat-space-container {
+	position: absolute;
+	width: 220px;
+	height: 400px;
+	top: 78px;
+	right: 0;
+	box-sizing: border-box;
+	padding: 10px 15px 5px;
+	background-color: #0f0f0f;
+	border-radius: 0 2px 2px 0;
+}
+.chat-spaces i.icon-circle {
+	float: right;
+	line-height: 24px;
+	color: #171717;
+}
+.chat-spaces i.icon-circle.green {
+	color: #4ead00;
+}
+.chat-spaces li {
+	clear: both;
+}
+.chat-spaces a {
+	color: #888;
+	font-weight: normal;
+}
+.chat-spaces a:hover {
+	color: #fff;
+}
+.chat-spaces a.active {
+	color: #fff;
+	font-weight: bold;
+}
+
+/* ----------------------------------------------- MESSAGE BADGES */
+
+.message-block {
+	display: table;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.message-block li {
+	display: table-cell;
+}
+.message-block .messenger {
+	color: #fff;
+	width: 170px;
+}
+.message-block.me .messenger {
+	color: #08C;
+	font-weight: bold;
+}
+.message-block .message-badge-list {
+	width: 55px;
+	display: none;
+}
+.message-badge-list i {
+	color: #272727;
+	padding: 2px 3px 2px;
+}
+.message-badge-list i:hover {
+	color: #ffd400;
+	cursor: pointer;
+}
+.message-time {
+	width: 60px;
+	font-size: 9px;
+	text-align: right;
+	color: #888;
+}
+.at-mention {
+	margin: 0 2px;
+	padding: 3px 7px 4px;
+	border-radius: 2px;
+	color: #fff;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+	background-color: #888;
+	font-size: 11px;
+	position: relative;
+	top: -1px;
+}
+.at-mention.me {
+	background-color: #08C;
+	color: #fff;
+}
+.brand-bug {
+	position: absolute;
+	font-size: 11px;
+	bottom: 20px;
+	right: 20px;
+}
