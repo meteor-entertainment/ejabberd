@@ -64,12 +64,13 @@
 	display: table-cell;
 }
 .message-block .messenger {
-	color: #fff;
-	font-weight: bold;
 	padding-left: 9px;
 	width: 170px;
 }
-
+.message-block.me .messenger {
+	color: #08C;
+	font-weight: bold;
+}
 .message-block .message-badge-list {
 	width: 55px;
 	display: none;
@@ -88,7 +89,18 @@
 	text-align: right;
 	color: #494c4c;
 }
-
+.at-mention {
+	margin-right: 2px;
+	padding: 3px 7px;
+	border-radius: 2px;
+	color: #aeaeae;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+	background-color: #494c4c;
+}
+.at-mention.me {
+	background-color: #08C;
+	color: #fff;
+}
 .brand-bug {
 	float: right;
 	font-size: 11px;
