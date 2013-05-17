@@ -30,10 +30,13 @@ input[type="search"], input[type="tel"], input[type="color"], .uneditable-input 
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	background-image: none;
 	text-shadow: none;
 	padding: 0 10px;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	background-color: rgba(0,0,0,0.3);
 	border: 1px solid rgba(0,0,0,0.8);
 	border: 0;
@@ -41,6 +44,9 @@ input[type="search"], input[type="tel"], input[type="color"], .uneditable-input 
 	color: #888;
 }
 
+textarea {
+	height: auto;
+}
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus, 
 input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, 
 input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, 

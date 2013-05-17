@@ -330,8 +330,8 @@
 
                     <div id="login_pane" class="main-content auth">
                         <div class="row-fluid page-block">
-                            <h1><a href="#" onclick="location.reload();"><i class="icon-beer"></i> OiD Chat</a></h1>
-                            <p class="subhead">Where beer, code and top secret Skunkwerks unite in holy matrimony.</p>
+                            <h1><a href="#" onclick="location.reload();">OiD Chat</a></h1>
+                            <p class="subhead">Where <i class="icon-beer"></i>, <i class="icon-code"></i> and top secret Skunkwerks unite in holy matrimony.</p>
                             <p>Be advised. If you hacked into this without an invite, you're probably already dead.</p> 
                         </div>
 
@@ -391,35 +391,47 @@
                             <img class="fl logo-meteor" src="assets/images/logos/logo-meteor.png" width="90" /> 
                             <p class="fr">&copy; 2013 Meteor Entertainment | Seattle, WA</p>
                         </div>
-                    </div>
+                    </div><!--/#login_pane-->
 
-                    <div id="sendmsg_pane" style="display:none;">
-                        <b>Subject: </b><div id="curr_subj"></div>
-                        <h2>Incoming:</h2>
-                        <div id="iResp"></div>
-                        <h2>Send Message</h2>
-                        <form name="sendForm" onsubmit="return sendMsg(this);" action="#">
-                            <div class="spaced">
-                                <textarea name="msg" id='msgArea' rows="3" cols="80" tabindex="2"></textarea>
-                            </div>                <div class="spaced">
-                            <input type="submit" value="Send" tabindex="3">
-                            *
-                            <input type="button" value="Quit" tabindex="4" onclick="return quit();">
-                        </div>
-                    </form>
-                    <h2>Set subject</h2>
-                    <form name="subjForm" onsubmit="return sendSubj(this);" action="#">
-                        <div class="spaced">
-                            <input type="text" size="80" id="subjBox" name="subj" />
-                            <div class="spaced">
-                                <input type="submit" value="Set subject">
+                    <div id="sendmsg_pane" class="main-content chat">
+                        <div class="row-fluid">   
+                            <div class="span9">
+                                <h3>"oidchat"</h3>
+                                <p id="curr_subj">The subject of the room goes here. For oidchat, the subject happens to be astronomical asskicking koala ninjas.</p>
+                                
+                                <div id="iResp"></div>
+
+                                <form name="sendForm" onsubmit="return sendMsg(this);" action="#">
+                                    <label>Write a Message:</label>
+                                    <textarea name="msg" id='msgArea' rows="3" tabindex="2"></textarea>             
+                                    <button class="btn btn-blue" type="submit" tabindex="3">Send</button>
+                                    <button class="btn btn-blue" type="button" tabindex="4" onclick="return quit();">Quit</button>
+                                </form>
+
+                                <div class="row-fluid">
+                                    <form name="subjForm" onsubmit="return sendSubj(this);" action="#">
+                                        <label>Set Subject</label>
+                                        <input type="text" size="80" id="subjBox" name="subj" />
+                                        <a type="submit" class="btn btn-blue">Set</a>
+                                    </form>
+                                </div>    
                             </div>
+
+                            <div class="span3">
+                                <h3>Rooms</h3>
+                                <ul class="no-bullets chat-spaces">
+                                    <li><a href="#"><i class="icon-user"></i> Brian Enriquez</a><i class="icon-circle"></i></li>
+                                    <li><a href="#" class="active"><i class="icon-user"></i> Lily Grace Enriquez</a><i class="icon-circle green"></i></li>
+                                    <li><a href="#"><i class="icon-user"></i> Ann Marie Enriquez</a><i class="icon-circle"></i></li>
+                                    <li><a href="#"><i class="icon-user"></i> Cyrus Durgin</a><i class="icon-circle"></i></li>
+                                    <li><a href="#"><i class="icon-user"></i> Sarah Novotny</a><i class="icon-circle"></i></li>
+                                    <li><a href="#"><i class="icon-user"></i> Brett Holton</a><i class="icon-circle"></i></li>
+                                    <li><a href="#"><i class="icon-user"></i> Aaron Egaas</a><i class="icon-circle"></i></li>
+                                </ul>    
+                            </div>  
                         </div>
-                    </form>
-                </div><!--/.span-->
-            </div><!--/.row-fluid-->
-        </div><!--/.main-content-->
-    </div><!--/.container-->    
-</div><!--/.wrapper-->
-</body>
-</html>
+                    </div><!--/.main-content.chat-->
+                </div><!--/.container-->  
+            </div><!--/.wrapper-->
+        </body>
+        </html>

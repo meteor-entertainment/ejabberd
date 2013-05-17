@@ -8,6 +8,9 @@
 .margin5v {margin: 5px 0 !important;}
 .margin20v {margin: 20px 0 !important;}
 
+ul {margin-left: 0;}
+.no-bullets {list-style-type: none;}
+
 ::-moz-selection { background: #ee00ff; color: #fff; text-shadow: none; }
 ::selection { background: #ee00ff; color: #fff; text-shadow: none; }
 
