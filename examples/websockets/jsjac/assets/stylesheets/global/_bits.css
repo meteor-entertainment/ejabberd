@@ -1,0 +1,36 @@
+.cloak {display: none;}
+.centered {text-align: center;}
+.full-width {width: 100%;}
+.fl {float: left;}
+.fr {float: right;}
+.no-margin {margin: 0 !important;}
+.no-padding {padding: 0 !important;}
+.margin10v {margin: 5px 0 !important;}
+.margin20v {margin: 20px 0 !important;}
+
+ul {margin-left: 0;}
+.no-bullets {list-style-type: none;}
+
+::-moz-selection { background: #ee00ff; color: #fff; text-shadow: none; }
+::selection { background: #ee00ff; color: #fff; text-shadow: none; }
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #171717;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+  background: #474747;
+
+  &:hover {
+    background: #494c4c;
+  }
+}

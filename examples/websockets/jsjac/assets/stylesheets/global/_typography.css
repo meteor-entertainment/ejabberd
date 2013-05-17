@@ -1,0 +1,112 @@
+body {
+  font-family: "Lucida Grande", "Helvetica Neue", Tahoma, sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  overflow-x: hidden;
+  color: #888;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+h2 a {font-weight: normal;}
+.content a {
+	color: #888;
+	font-weight: normal;
+	padding-bottom: 1px;
+	border-bottom: 1px dotted #888;
+}
+.content a:hover {
+	color: #fff;
+	border-bottom: 1px solid #fff;
+}
+strong {
+	color: #fff;
+	font-weight: bold;
+}
+
+h1 {
+	font-family: Agency;
+ 	font-size: 70px;
+ 	line-height: 70px;
+}
+
+h1, h2, h3, h4, h5 {
+	color: #fff;
+	font-weight: normal;
+	margin: 0;
+}
+h2 {
+  font-size: 24px;
+}
+h4 {font-size: 14px;}
+h5 {
+  font-size: 16px;
+  margin: 20px 0 10px;
+}
+h5 a {font-weight: normal;}
+
+.page-header {
+	padding: 0 20px 0 0;
+	margin: 0 0 40px;
+	border: 0;
+}
+.page-header h1 {
+	font-size: 84px;
+	line-height: 84px;
+}
+.page-header p {
+	font-size: 18px;
+	line-height: 22px;
+	margin-bottom: 20px;
+}
+
+.content h2 {
+	margin-top: 40px;
+}
+.content h2:first-of-type {
+	margin-top: 10px;
+}
+
+.headline {
+	text-align: center;
+}
+
+.meta-right {
+	font-family: georgia, serif;
+	font-style: italic;
+	font-size: 12px;
+	float: right;
+}
+
+.logo-oidchat {
+	font-family: Agency;
+	color: #fff;
+	font-size: 16px;
+}
+
+//---------------------------------------------------------- PARAGRAPHS
+
+p {
+  margin-bottom: 10px;
+}
+p.subhead {
+  font-size: 18px;
+  color: #fff;
+}
+p.title {
+  font-weight: bold;
+  color: #fff;
+}
+
+//---------------------------------------------------------- LISTS
+
+ul li {
+  font-size: 12px;
+}

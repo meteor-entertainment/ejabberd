@@ -1,0 +1,106 @@
+.btn {
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	font-weight: normal;
+}
+.btn:hover {
+	background-position: 0 0;
+	-webkit-box-shadow: inset 0 0px 3px rgba(255,255,255,0.3);
+	-moz-box-shadow: inset 0 0px 3px rgba(255,255,255,0.3);
+	box-shadow: inset 0 0px 3px rgba(255,255,255,0.3);
+}
+.btn-large {
+	padding: 15px 25px;
+}
+.btn-green {
+  background-color: hsl(91, 60%, 36%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#96d65b", endColorstr="#599224");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#96d65b), to(#599224));
+  background-image: -moz-linear-gradient(top, #96d65b, #599224);
+  background-image: -ms-linear-gradient(top, #96d65b, #599224);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #96d65b), color-stop(100%, #599224));
+  background-image: -webkit-linear-gradient(top, #96d65b, #599224);
+  background-image: -o-linear-gradient(top, #96d65b, #599224);
+  background-image: linear-gradient(#96d65b, #599224);
+  border: 1px #599224 #599224 hsl(91, 60%, 30%);
+  color: #fff !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn-green:hover {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#A3DB6F", endColorstr="#65A629");
+	background-image: -khtml-gradient(linear, left top, left bottom, from(#A3DB6F), to(#65A629));
+	background-image: -moz-linear-gradient(top, #A3DB6F, #65A629);
+	background-image: -ms-linear-gradient(top, #A3DB6F, #65A629);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #A3DB6F), color-stop(100%, #65A629));
+	background-image: -webkit-linear-gradient(top, #A3DB6F, #65A629);
+	background-image: -o-linear-gradient(top, #A3DB6F, #65A629);
+	background-image: linear-gradient(#A3DB6F, #65A629);
+}
+
+.btn-blue {
+	background-color: #0070ab !important;
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00aff2", endColorstr="#0070ab");
+	background-image: -khtml-gradient(linear, left top, left bottom, from(#00aff2), to(#0070ab));
+	background-image: -moz-linear-gradient(top, #00aff2, #0070ab);
+	background-image: -ms-linear-gradient(top, #00aff2, #0070ab);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00aff2), color-stop(100%, #0070ab));
+	background-image: -webkit-linear-gradient(top, #00aff2, #0070ab);
+	background-image: -o-linear-gradient(top, #00aff2, #0070ab);
+	background-image: linear-gradient(#00aff2, #0070ab);
+	border: 1px #0070ab #0070ab;
+	color: #fff !important;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn-blue:hover {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00bbff", endColorstr="#08C");
+	background-image: -khtml-gradient(linear, left top, left bottom, from(#00bbff), to(#08C));
+	background-image: -moz-linear-gradient(top, #00bbff, #08C);
+	background-image: -ms-linear-gradient(top, #00bbff, #08C);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00bbff), color-stop(100%, #08C));
+	background-image: -webkit-linear-gradient(top, #00bbff, #08C);
+	background-image: -o-linear-gradient(top, #00bbff, #08C);
+	background-image: linear-gradient(#00bbff, #08C);
+}
+
+.btn-large:hover {
+	-webkit-box-shadow: inset 0 0 7px rgba(255, 255, 255, 0.3);
+	-moz-box-shadow: inset 0 0 7px rgba(255, 255, 255, 0.3);
+	box-shadow: inset 0 0 7px rgba(255, 255, 255, 0.3);
+}
+
+.btn-flat {
+	background-color: #aeaeae;
+	background-image: none;
+	box-shadow: none;
+	border: 0;
+	border-radius: 0;
+	font-size: 11px;
+	text-shadow: none;
+	color: #fff;
+}
+.btn-flat.btn-blue {
+  background-color: #08C;
+  &:hover {background-color: #00aff2;}
+}
+.btn-flat.btn-gold {
+  background-color: #ffaa00;
+  &:hover {background-color: #8500e5;}
+}
+.btn-flat.btn-pink {
+  background-color: #a500ff;
+  &:hover {background-color: #6500a0;}
+}
+.btn-flat:hover {
+	color: #fff;
+	box-shadow: none;
+}
+.btn .small {
+	display: block;
+	font-weight: normal;
+}
