@@ -23,7 +23,11 @@
         <script type="text/javascript">
             // <![CDATA[
             var currentSubject = "";
-
+            var Host = "ws://service01.dev.supernova.meteor-ent.com:5288/ws-xmpp/"
+            var Service = "muc.supernova.com"
+            var Domain = "supernova.com"
+            var Room = "OiD"
+            
             function handleIQ(oIQ) {
                 if(oIQ.getType() != "result") {
                     document.getElementById('iResp').innerHTML += "<div class='msg'>IN (raw): " + oIQ.xml().htmlEnc() + '</div>';
@@ -172,14 +176,14 @@
 
                 try {
 
-                    if (oForm.http_base.value.substr(0, 5) === 'ws://' || oForm.http_base.value.substr(0, 6) === 'wss://') {
+                    if (Host.substr(0, 5) === 'ws://' || Host.substr(0, 6) === 'wss://') {
                         con = new JSJaCWebSocketConnection({
-                            httpbase : oForm.http_base.value,
+                            httpbase : Host,
                             oDbg : new JSJaCConsoleLogger(4)
                         });
                     } else {
                         con = new JSJaCHttpBindingConnection({
-                            httpbase : oForm.http_base.value,
+                            httpbase : Host,
                             oDbg : new JSJaCConsoleLogger(4)
                         });
                     }
@@ -188,9 +192,9 @@
 
                     // setup args for connect method
                     oArgs = new Object();
-                    oArgs.domain = oForm.server.value;
+                    oArgs.domain = Domain;
                     oArgs.username = oForm.username.value;
-                    oArgs.resource = 'jsjac_simpleclient';
+                    oArgs.resource = 'oid_webchat';
                     oArgs.pass = oForm.password.value;
                     oArgs.register = oForm.register.checked;
                     con.connect(oArgs);
@@ -259,7 +263,7 @@
            }
 
            function getRoomJID() {
-            return document.getElementById('room').value + '@' + document.getElementById('muc_server').value; 
+            return document.getElementById('room').value + '@' + Service; 
         }
 
         function getRoomNickJID() {
