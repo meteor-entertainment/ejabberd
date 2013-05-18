@@ -23,11 +23,13 @@
         <script type="text/javascript">
             // <![CDATA[
             var currentSubject = "";
-            var Host = "ws://service01.dev.supernova.meteor-ent.com:5288/ws-xmpp/"
+            var Host = "ws://service1.dev.supernova.meteor-ent.com:5288/ws-xmpp/"
             var Service = "muc.supernova.com"
             var Domain = "supernova.com"
             var Room = "OiD"
-            
+            var Occupants = new Array();
+            var time = new Date();
+
             function handleIQ(oIQ) {
                 if(oIQ.getType() != "result") {
                     document.getElementById('iResp').innerHTML += "<div class='msg'>IN (raw): " + oIQ.xml().htmlEnc() + '</div>';
@@ -58,13 +60,55 @@
                     setSubject(from, subj);
                 var body = oJSJaCPacket.getBody().htmlEnc();
                 if(body != '') {
-                    html += '<div class="msg"><b>Received Message from ' + from + ':</b><br/>';
-                    html += body + '</div>';
+                    html += setMessageBlockClass(from);
+		    html += '<li class="messenger">' + from + ':</li>';
+                    html += '<li class="message">' + body + '</li>';
+                    html += '<li class="message-time">' + time.toLocaleTimeString() + '</li>';
+		    html += '</ul>';
                     document.getElementById('iResp').innerHTML += html;
                     document.getElementById('iResp').lastChild.scrollIntoView();
                 }
             }
+            function setMessageBlockClass(sender){
+                 if(isMe(sender)){
+                    return '<ul class="no-bullets message-block me">';
+                 } else {
+                     return '<ul class="no-bullets message-block">';
+                 }
+            }
+            function formatMessage(Message){
+                           
+            }
+            
+            function doMentionMarkup(message){
+            }
+            
+            function isMe(userNick){
+                return userNick == document.getElementById('nick').value;
 
+            }
+            function addOccupant(userNick){
+               Occupants.push(userNick);
+               updateOccupantList();
+            }
+
+            function removeOccupant(userNick){
+               var index = Occupants.indexOf(userNick);
+               Occupants.splice(index,1); 
+               updateOccupantList();
+            }
+            function updateOccupantList(){
+               Occupants.sort();
+               var listHdr = '<ul class="no-bullets chat-spaces">';
+               var html = '';
+               html += Occupants.reduce(makeOccupantMarkup,listHdr);
+               html += '</ul>';
+               document.getElementById('iOccupants').innerHTML = html;
+            } 
+            function makeOccupantMarkup(Acc, occupant,index,list){
+               Acc += '<li><a href="#" class="active">' + occupant + '<i class="icon-circle green"></i></li>';
+               return Acc;
+            }
             function handlePresence(oJSJaCPacket) {
                 if(oJSJaCPacket.getFromJID().getResource() == document.getElementById('nick').value) {
                     handleRoomJoin(oJSJaCPacket);
@@ -96,13 +140,17 @@
 
                     con.send(iq);
                 }
+                addOccupant(oJSJaCPacket.getFromJID().getResource());
             }
 
             function displayPresence(oJSJaCPacket) {
                 var html = '<div class="msg">';
-                if (!oJSJaCPacket.getType() && !oJSJaCPacket.getShow())
+                if (!oJSJaCPacket.getType() && !oJSJaCPacket.getShow()){
                     html += '<b>' + oJSJaCPacket.getFromJID().getResource() + ' has become available.</b>';
+                    addOccupant(oJSJacPacket.getFromJid().getResource());
+                }
                 else {
+                    removeOccupant(oJSJaCPacket.getFromJID().getResource());
                     html += '<b>' + oJSJaCPacket.getFromJID().getResource() + ' has set his presence to ';
                     if (oJSJaCPacket.getType())
                         html += oJSJaCPacket.getType() + '.</b>';
@@ -281,6 +329,7 @@
         }
 
         function init() {
+                document.getElementById('sendmsg_pane').style.display = 'none';
                 try {// try to resume a session
                     con = new JSJaCHttpBindingConnection({
                         'oDbg' : new JSJaCConsoleLogger(4)
@@ -406,16 +455,16 @@
                                 </ul>
                             </div>
 
-                            <div class="chat-space-container">  
-                                <ul class="no-bullets chat-spaces">
+                            <div id="iOccupants" class="chat-space-container">  
+                              <!---  <ul class="no-bullets chat-spaces">
                                     <li><a href="#">Brian Enriquez</a><i class="icon-circle"></i></li>
                                     <li><a href="#" class="active">Lily Grace Enriquez</a><i class="icon-circle green"></i></li>
                                     <li><a href="#">Ann Marie Enriquez</a><i class="icon-circle"></i></li>
                                     <li><a href="#">Cyrus Durgin</a><i class="icon-circle"></i></li>
                                     <li><a href="#">Sarah Novotny</a><i class="icon-circle"></i></li>
                                     <li><a href="#">Brett Holton</a><i class="icon-circle"></i></li>
-                                    <li><a href="#">Aaron Egaas</a><i class="icon-circle"></i></li>
-                                </ul>   
+                                    <li><a href="#">Aaron Egaas</a><i class="icon-circle"></i></li> 
+                                </ul> -->  
                             </div>     
 
                             <form id="form_message" name="sendForm" onsubmit="return sendMsg(this);" action="#">
