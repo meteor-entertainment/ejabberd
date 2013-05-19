@@ -1,0 +1,13 @@
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1200px) {
+	.main-content.auth {
+		margin-top: 60px;
+	}
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1600px) {
+/* Styles */
+}
