@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>OiD Chat | Meteor Entertainment</title>
+    <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/libs/bootstrap/bootstrap.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
@@ -326,24 +327,23 @@
             </script>
         </head>
         <body>
-            <div class="wrapper">
+            <div class="wrapper auth">
                 <div class="container"> 
 
                     <div id="err"></div>
 
                     <div id="login_pane" class="main-content auth">
-                        <div class="row-fluid page-block">
+                        <div class="row-fluid header">
                             <h1><a href="#" onclick="location.reload();">OiD Chat</a></h1>
-                            <p class="subhead">Where <i class="icon-beer"></i>, <i class="icon-code"></i> and top secret Skunkwerks unite in holy matrimony.</p>
-                            <p>Be advised. If you hacked into this without an invite, you're probably already dead.</p> 
+                            <p class="subhead">Where beer, code, and top secret Skunkwerks unite in holy matrimony.</p> 
                         </div>
 
-                        <form class="login row-fluid" name="loginForm" onSubmit="return doLogin(this);" action="#">
+                        <form class="login row-fluid" name="loginForm" onSubmit="return doLogin(this);" action="post">
 
                             <div class="row-fluid form-block">
                                 <div class="control-group">
                                     <label for="username">Username</label>
-                                    <input type="text" name="username" id="username" tabindex="5"/>
+                                    <input autofocus type="text" name="username" id="username" tabindex="5"/>
                                 </div>    
 
                                 <div class="control-group">
@@ -363,23 +363,23 @@
                                 </div>
 
                                 <div class="action-footer">
-                                    <button class="btn btn-blue fr" type="submit" value="Login" tabindex="9"><i class="icon-lock"></i> Login</button>
+                                    <button class="btn btn-blue fr" type="submit" tabindex="9"><i class="icon-lock"></i> Login</button>
 
-                                    <input class="inline" type="checkbox" name="register" id="register_checkbox" />
-                                    <label for="register_checkbox">Register New Account</label>
+                                    <label class="clickable small" for="register_checkbox">
+                                        <input class="inline" type="checkbox" name="register" id="register_checkbox" />
+                                         Register New Account
+                                    </label>
                                 </div>
                             </div>    
                         </form>
 
-                        <div class="row-fluid form-meta">
-                            <img class="fl logo-meteor" src="assets/images/logos/logo-meteor.png" width="90" /> 
-                        </div>
+                        <div class="row-fluid form-meta"></div>
                     </div><!--/#login_pane-->
                 </div><!--/.container-->  
             </div><!--/.wrapper-->
 
-            <div class="wrapper">
-                <div id="sendmsg_pane" class="main-content chat">
+            <div id="sendmsg_pane" class="wrapper chat">
+                <div class="main-content chat">
                         <div class="row-fluid">
                             <div class="header">
                                 <a class="btn btn-danger fr margin10v" type="button" tabindex="4" onclick="return quit();"><i class="icon-signout"></i> Leave</a>  

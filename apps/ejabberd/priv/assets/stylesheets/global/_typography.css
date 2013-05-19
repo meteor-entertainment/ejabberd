@@ -33,8 +33,9 @@ strong {
 
 h1 {
 	font-family: Agency;
- 	font-size: 70px;
- 	line-height: 70px;
+ 	font-size: 80px;
+ 	line-height: 90px;
+ 	text-shadow: 0 20px 20px rgba(0,0,0,0.5);
 }
 
 h1, h2, h3, h4, h5 {
@@ -91,21 +92,30 @@ h5 a {font-weight: normal;}
 	font-size: 16px;
 }
 
-//---------------------------------------------------------- PARAGRAPHS
+/*---------------------------------------------------------- AUTH */
+
+.main-content.auth p {
+	color: #fff;
+}
+
+/*---------------------------------------------------------- PARAGRAPHS */
 
 p {
   margin-bottom: 10px;
 }
 p.subhead {
-  font-size: 18px;
-  color: #fff;
+	font-size: 18px;
+	color: #fff;
+	line-height: 24px;
+	padding: 0 30px;
+	margin-top: 10px;
 }
 p.title {
   font-weight: bold;
   color: #fff;
 }
 
-//---------------------------------------------------------- LISTS
+/*---------------------------------------------------------- LISTS */
 
 ul li {
   font-size: 12px;

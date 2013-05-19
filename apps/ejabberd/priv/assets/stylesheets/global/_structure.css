@@ -1,6 +1,8 @@
+html, body, .wrapper {
+  height: 100%;
+}
 html {
 	font-size: 100%; 
-  height: auto;
 	-webkit-text-size-adjust: 100%; 
 	-ms-text-size-adjust: 100%;
 }
@@ -11,6 +13,13 @@ body {
 .wrapper {
   -webkit-animation: magicallyAppear 500ms ease-in;
   min-width: 960px;
+  background-color: #272727;
+}
+
+.wrapper.auth {
+  background-image: url('/assets/images/space.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 .container {
@@ -22,8 +31,11 @@ body {
   margin-bottom: 40px;
 }
 .main-content.auth {
-  width: 600px;
+  width: 400px;
   margin: 100px auto 0;
+}
+.main-content.auth .header {
+  text-align: center;
 }
 .main-content.chat {
   margin: 10px 20px 0;
@@ -33,9 +45,6 @@ body {
   margin-bottom: 20px;
 }
 form.login {
-  background-color: rgba(0,0,0,0.2);
-  padding: 20px;
-  border-radius: 2px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;

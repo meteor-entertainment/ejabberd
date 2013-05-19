@@ -1,4 +1,5 @@
 .cloak {display: none;}
+.reveal {display: block !important;}
 .centered {text-align: center;}
 .full-width {width: 100%;}
 .fl {float: left;}
