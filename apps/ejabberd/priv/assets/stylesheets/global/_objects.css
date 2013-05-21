@@ -10,6 +10,7 @@
  
 #msgArea {
 	resize: none; 
+	padding-right: 90px;
 }
 .msg {
     color: #fff;
@@ -20,7 +21,14 @@
 	background-color: red;
 	color: #fff;
 	padding: 5px 10px;
-	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
+}
+.msg.error i {
+	padding: 10px 10px;
+	background-color: rgba(0,0,0,0.2);
+	margin: 0 5px 0 -10px;
 }
 #err {
 	padding: 10px 15px;
@@ -31,8 +39,8 @@
 	position: absolute;
 	width: 220px;
 	height: 400px;
-	top: 78px;
-	right: 0;
+	top: 88px;
+	right: 20px;
 	box-sizing: border-box;
 	padding: 10px 15px 5px;
 	background-color: #0f0f0f;

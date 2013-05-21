@@ -85,7 +85,8 @@ input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, 
 #form_setSubject.open {
 	top: 0;
 }
-#form_setSubject a.btn {
+#form_setSubject button.btn,
+#form_message button {
 	position: relative;
 	top: -45px;
 	right: 5px;

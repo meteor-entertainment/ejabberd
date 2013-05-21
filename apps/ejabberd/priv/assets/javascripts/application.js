@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('#login_pane').hide().delay(200).fadeIn('1000');
+	$('.main-content.auth').hide().delay(200).fadeIn('1000');
 	$('#change_subject').click(function() {
 		$('#form_setSubject').addClass('open');
 	});

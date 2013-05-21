@@ -282,7 +282,7 @@
                     
                     return false;
                 } catch (e) {
-                    html = "<div class='msg error''>Error: " + e.message + "</div>";
+                    html = "<div class='msg error'><i class='icon-warning-sign'></i> Error: " + e.message + "</div>";
                     document.getElementById('iResp').innerHTML += html;
                     document.getElementById('iResp').lastChild.scrollIntoView();
                     return false;
@@ -302,7 +302,7 @@
 
                         oForm.subj.value = '';
                     } catch (e) {
-                       html = "<div class='msg error''>Error: " + e.message + "</div>";
+                       html = "<div class='msg error'><i class='icon-warning-sign'></i> Error: " + e.message + "</div>";
                        document.getElementById('iResp').innerHTML += html;
                        document.getElementById('iResp').lastChild.scrollIntoView();
                    }
@@ -434,45 +434,19 @@
                 <div class="main-content chat">
                         <div class="row-fluid">
                             <div class="header">
-                                <a class="btn btn-danger fr margin10v" type="button" tabindex="4" onclick="return quit();"><i class="icon-signout"></i> Leave</a>  
+                                <a class="fr margin10v" onclick="return quit();"><i class="icon-signout"></i> Leave</a>  
                                 <h3>"oidchat"</h3>
                                 <p id="curr_subj">The subject of the room goes here. For oidchat, the subject happens to be astronomical asskicking koala ninjas. <a id="change_subject" href="#">Change Subject</a></p>
                             </div>
                             
-                            <div id="iResp">
-                            <!--//SAMPLE CONVERSATION
-                                <ul class="no-bullets message-block me">
-                                    <li class="messenger">Brian Enriquez:</li>
-                                    <li class="message">Cupcake ipsum dolor sit amet cheesecake bonbon candy oat cake. I love tootsie roll bear claw cookie chocolate cake. <span class="at-mention">@Brett Holton</span> Applicake I love wafer toffee toffee ice cream. Fruitcake candy tiramisu chocolate bar.</li>
-                                    <li class="message-time">7:27pm</li>
-                                </ul>
+                            <div id="iResp"></div>
 
-                                <ul class="no-bullets message-block">
-                                    <li class="messenger">Brett Holton:</li>
-                                    <li class="message">YO <span class="at-mention me">@Brian Enriquez</span> This is a message specifically addressed to you.</li>
-                                    <li class="message-time">7:27pm</li>
-                                </ul>
-                            -->    
-                            </div>
-
-                            <div id="iOccupants" class="chat-space-container">  
-                              <!--  
-                                <ul class="no-bullets chat-spaces">
-                                    <li><a href="#">Brian Enriquez</a><i class="icon-circle"></i></li>
-                                    <li><a href="#" class="active">Lily Grace Enriquez</a><i class="icon-circle green"></i></li>
-                                    <li><a href="#">Ann Marie Enriquez</a><i class="icon-circle"></i></li>
-                                    <li><a href="#">Cyrus Durgin</a><i class="icon-circle"></i></li>
-                                    <li><a href="#">Sarah Novotny</a><i class="icon-circle"></i></li>
-                                    <li><a href="#">Brett Holton</a><i class="icon-circle"></i></li>
-                                    <li><a href="#">Aaron Egaas</a><i class="icon-circle"></i></li> 
-                                </ul>
-                                -->  
-                            </div>     
+                            <div id="iOccupants" class="chat-space-container"></div>     
 
                             <form id="form_message" name="sendForm" onsubmit="return sendMsg(this);" action="#">
                                 <label>Write a Message:</label>
-                                <textarea name="msg" id='msgArea' rows="3" tabindex="2"></textarea>             
-                                <button class="btn btn-blue" type="submit" tabindex="3">Submit</button>   
+                                <input autofocus="autofocus" type="text" name="msg" id="msgArea" />             
+                                <button class="btn btn-blue fr" type="submit" tabindex="3">Enter</button>   
                             </form>
                         </div> 
                     </div><!--/.main-content.chat-->
@@ -482,13 +456,9 @@
                             <button type="button" class="close"><i class="icon-remove"></i></button>
                             <label>Set Subject</label>
                             <input type="text" size="80" id="subjBox" name="subj" />
-                            <a type="submit" class="btn btn-blue fr">Submit</a>
+                            <button type="submit" class="btn btn-blue fr">Submit</button>
                         </div>
                     </form>
-
-                    <div class="brand-bug">
-                        <span class="logo-oidchat">OiD Chat</span> &nbsp;&copy; 2013 Meteor Entertainment
-                    </div>
             </div><!--/.wrapper-->    
         </body>
         </html>
