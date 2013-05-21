@@ -12,7 +12,9 @@
 	resize: none; 
 }
 .msg {
-    border-bottom: 1px solid black;
+    color: #fff;
+	margin: 5px 0 20px 170px;
+	font-size: 11px;
 }
 .error {
 	background-color: red;

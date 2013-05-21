@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/styles.css">
 
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="assets/javascripts/application.js"></script>
     <script type="text/javascript" src="jsjac.js"></script>
         <!-- comment in above and uncomment below if you want to modify/hack
@@ -44,7 +43,7 @@
                     subj = "";
                 if(subj == currentSubject)
                     return;
-                var html = '<div class="msg"><b>Subject set by ' + from + ' to "' + subj + '"</b><br/>';
+                var html = '<div class="msg">Subject set by ' + from + ' to "' + subj + '"<br/>';
                 document.getElementById('iResp').innerHTML += html;
                 document.getElementById('iResp').lastChild.scrollIntoView();
 
@@ -380,18 +379,18 @@
             </script>
         </head>
         <body>
-            <div class="wrapper auth">
+            <div id="login_pane" class="wrapper auth">
                 <div class="container"> 
 
                     <div id="err"></div>
 
-                    <div id="login_pane" class="main-content auth">
+                    <div class="main-content auth">
                         <div class="row-fluid header">
                             <h1><a href="#" onclick="location.reload();">OiD Chat</a></h1>
                             <p class="subhead">Where beer, code, and top secret Skunkwerks unite in holy matrimony.</p> 
                         </div>
 
-                        <form class="login row-fluid" name="loginForm" onSubmit="return doLogin(this);" action="post">
+                        <form class="login row-fluid" name="loginForm" onSubmit="return doLogin(this);" action="#">
 
                             <div class="row-fluid form-block">
                                 <div class="control-group">
@@ -416,7 +415,7 @@
                                 </div>
 
                                 <div class="action-footer">
-                                    <button class="btn btn-blue fr" type="submit" tabindex="9"><i class="icon-lock"></i> Login</button>
+                                    <button class="btn btn-blue fr" value="Login" type="submit" tabindex="9"><i class="icon-lock"></i> Login</button>
 
                                     <label class="clickable small" for="register_checkbox">
                                         <input class="inline" type="checkbox" name="register" id="register_checkbox" />
@@ -441,7 +440,7 @@
                             </div>
                             
                             <div id="iResp">
-                            <!--//SAMPLE CONVERSATION-->
+                            <!--//SAMPLE CONVERSATION
                                 <ul class="no-bullets message-block me">
                                     <li class="messenger">Brian Enriquez:</li>
                                     <li class="message">Cupcake ipsum dolor sit amet cheesecake bonbon candy oat cake. I love tootsie roll bear claw cookie chocolate cake. <span class="at-mention">@Brett Holton</span> Applicake I love wafer toffee toffee ice cream. Fruitcake candy tiramisu chocolate bar.</li>
@@ -453,10 +452,12 @@
                                     <li class="message">YO <span class="at-mention me">@Brian Enriquez</span> This is a message specifically addressed to you.</li>
                                     <li class="message-time">7:27pm</li>
                                 </ul>
+                            -->    
                             </div>
 
                             <div id="iOccupants" class="chat-space-container">  
-                              <!---  <ul class="no-bullets chat-spaces">
+                              <!--  
+                                <ul class="no-bullets chat-spaces">
                                     <li><a href="#">Brian Enriquez</a><i class="icon-circle"></i></li>
                                     <li><a href="#" class="active">Lily Grace Enriquez</a><i class="icon-circle green"></i></li>
                                     <li><a href="#">Ann Marie Enriquez</a><i class="icon-circle"></i></li>
@@ -464,7 +465,8 @@
                                     <li><a href="#">Sarah Novotny</a><i class="icon-circle"></i></li>
                                     <li><a href="#">Brett Holton</a><i class="icon-circle"></i></li>
                                     <li><a href="#">Aaron Egaas</a><i class="icon-circle"></i></li> 
-                                </ul> -->  
+                                </ul>
+                                -->  
                             </div>     
 
                             <form id="form_message" name="sendForm" onsubmit="return sendMsg(this);" action="#">
