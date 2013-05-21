@@ -43,7 +43,7 @@
                     subj = "";
                 if(subj == currentSubject)
                     return;
-                var html = '<div class="msg">Subject set by ' + from + ' to "' + subj + '"<br/>';
+                var html = '<div class="msg">Subject set by ' + from + ' to "' + subj + '"';
                 document.getElementById('iResp').innerHTML += html;
                 document.getElementById('iResp').lastChild.scrollIntoView();
 
@@ -436,7 +436,10 @@
                             <div class="header">
                                 <a class="fr margin10v" onclick="return quit();"><i class="icon-signout"></i> Leave</a>  
                                 <h3>"oidchat"</h3>
-                                <p id="curr_subj">The subject of the room goes here. For oidchat, the subject happens to be astronomical asskicking koala ninjas. <a id="change_subject" href="#">Change Subject</a></p>
+                                <p>
+                                    <span id="curr_subj">The subject of the room goes here. For oidchat, the subject happens to be astronomical asskicking koala ninjas.</span> 
+                                    <a id="change_subject" href="#">Change Subject</a>
+                                </p>
                             </div>
                             
                             <div id="iResp"></div>
